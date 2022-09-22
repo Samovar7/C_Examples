@@ -28,6 +28,8 @@ if (size_number < seq_number)
 }
 else
 {
-    int seq = (user_number / 10^(size_number - seq_number))%10;
+    //int seq = (user_number / 10^(size_number - seq_number))%10; возведение в степень таким образом работает как-то не правильно
+    int i = Convert.ToInt32(Math.Pow(10, (size_number - seq_number))); // Вычисляем на 10 в какой степени будем делить на цело наше число
+    int seq = (user_number / i)%10;
     Console.WriteLine($"{seq_number} цифра в вашем числе {user_number} равна {seq}");
 }
