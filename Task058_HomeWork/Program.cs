@@ -27,6 +27,7 @@ int[,] MassiveMultiplikation(int[,] ArrayA, int[,] ArrayB) // Функция у�
     if (ArrayA.GetLength(1) != ArrayB.GetLength(0))
     {
         System.Console.WriteLine("Эти массивы нельзя умножить, не совпадение размерностей.");
+        ArrayC = new int[1,1];
         return ArrayC;
     }
     
@@ -72,10 +73,10 @@ void ShowArray(int[,] inputArray)
     }
 }
 
-int[,] ArrayA = GenerateArray(3, 2, 10);
-int[,] ArrayB = GenerateArray(2, 2, 10);
+int[,] ArrayA = GenerateArray(3, 3, 10);
+int[,] ArrayB = GenerateArray(4, 4, 10);
 ShowArray(ArrayA);
 Console.WriteLine();
 ShowArray(ArrayB);
-System.Console.WriteLine("Произведение массива А на массив В = массив С:");
+Console.WriteLine("Произведение массива А на массив В = массив С:");
 ShowArray(MassiveMultiplikation(ArrayA, ArrayB));

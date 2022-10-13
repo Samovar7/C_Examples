@@ -56,7 +56,7 @@ void PrintArray(int[,,] incomingArray)
 }
 
 
-int[,,] userArray = GenerateArray(3,3,10);
+int[,,] userArray = GenerateArray(3,3,11);
 if ((userArray.GetLength(0) + userArray.GetLength(1) + userArray.GetLength(2)) != 3)
 {
     PrintArray(userArray);
